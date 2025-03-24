@@ -15,7 +15,7 @@ const authenticateToken = (req, res, next) => {
             return res.redirect("/");
         }
         req.user = user;
-        next();
+        next()
     });
 };
 
