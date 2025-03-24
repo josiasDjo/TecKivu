@@ -14,3 +14,22 @@ exports.createCategory = async (req, res) => {
         return res.json({ success: false, message: 'Une erreur s\'est produite'});
     }
 }
+
+exports.getAllCategories = async (req, res) => {
+    try {
+        const allCategories = await Categories.findAll();
+        return allCategories;
+    } catch (err) {
+        console.log('Une erreur s\'est produite : ', err);
+        return res.json({ success: false, message: 'Une erreur s\'est produite'});
+    }
+}
+
+exports.modifyCategory = async (req, res) => {
+    try {
+        const { category_name, description } = req.body;
+    } catch(err) {
+        console.log('Une erreur s\'est produite : ', err);
+        return res.json({ success: false, message: 'Une erreur s\'est produite'});
+    }
+}
