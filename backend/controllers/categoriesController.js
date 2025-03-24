@@ -1,0 +1,1 @@
+const Categories = requrie('../models/Categories');
