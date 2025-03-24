@@ -1,4 +1,4 @@
-const Categories = requrie('../models/Categories');
+const Categories = require('../models/Categories');
 
 exports.createCategory = async (req, res) => {
     try {
@@ -39,5 +39,5 @@ exports.modifyCategory = async (req, res) => {
 }
 
 exports.deleteCategory = async (req, res) => {
-    
+
 }
