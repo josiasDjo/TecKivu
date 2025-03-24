@@ -27,14 +27,17 @@ exports.getAllProducts = async (req, res) => {
 
 exports.modifyProducts = async (req, res) => {
     try {
-
+        const { product_id,category_id,product_name,description,price,stock,image } = req.body;
+        const ProductExist = await Products.findByPk(product_id);
+        if (!ProductExist) return res.json({ success: false, message: 'Une erreur s\'est produite : Nous n\'avons pas pu trouver le produit'});
+        
     } catch(err) {
         console.log('Une erreur s\'est produite : ', err);
         return res.json({ success: false, message: 'Une erreur s\'est produite'});
     }
 }
 
-exports.deleteProducts = async (req, res) {
+exports.deleteProducts = async (req, res) => {
     try {
 
     } catch (err) {
