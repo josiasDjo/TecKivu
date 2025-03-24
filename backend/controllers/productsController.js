@@ -14,3 +14,31 @@ exports.addProduct = async (req, res) => {
         return res.json({ success: false, message: 'Une erreur s\'est produite'});
     }
 }
+
+exports.getAllProducts = async (req, res) => {
+    try {
+        const AllProducts = await Products.findAll();
+        return AllProducts;
+    } catch(err) {
+        console.log('Une erreur s\'est produite : ', err);
+        return res.json({ success: false, message: 'Une erreur s\'est produite'});
+    }
+}
+
+exports.modifyProducts = async (req, res) => {
+    try {
+
+    } catch(err) {
+        console.log('Une erreur s\'est produite : ', err);
+        return res.json({ success: false, message: 'Une erreur s\'est produite'});
+    }
+}
+
+exports.deleteProducts = async (req, res) {
+    try {
+
+    } catch (err) {
+        console.log('Une erreur s\'est produite : ', err);
+        return res.json({ success: false, message: 'Une erreur s\'est produite'});
+    }
+}
