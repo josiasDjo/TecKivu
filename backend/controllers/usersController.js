@@ -18,6 +18,7 @@ exports.createUser = async (req, res) => {
             email: newUser.email,
             role_id: newUser.role
         }
+        return res.json({ success: true, message: 'Connexion réussie'});
     } catch(err) {
         console.log(`Une erreur s'est produite : ${err}`);
         return res.json({ success: false, message: 'Une erreur s\'est produite'});
@@ -25,7 +26,25 @@ exports.createUser = async (req, res) => {
 };
 
 exports.getUser = async (req, res) => {
+    try {
+        const {  email, password_user } = req.body;
+        const user = await User.findOne({ where: { email, password_user }});
+        if(!user) return res.json({ success: false, message: 'Email ou mot de passe incorrect'});
+        console.log('User : ', user);
 
+        req.session.users = {
+            id_user: newUser.user_id,
+            username: newUser.username,
+            nom: newUser.last_name,
+            prenom: newUser.first_name,
+            email: newUser.email,
+            role_id: newUser.role
+        }
+        return res.json({ success: true, message: 'Connexion réussie'});
+    } catch(err) {
+        console.log(`Une erreur s\'est produite : ${err}`);
+        return res.json({ success: false, message: 'Une erreur s\'est produite'});
+    }
 };
 
 exports.updateUser = async (req, res) => {
