@@ -8,6 +8,7 @@ exports.createCategory = async (req, res) => {
 
         const newCategory = await Categories.create({ category_name, description });
         console.log('Nouvelle catégorie : ', newCategory);
+        return res.json({ success: true, message: 'Nouvelle catégorie ajouté'});
     } catch (err) {
         console.log(`Une erreur s'est produite : ${err}`);
         return res.json({ success: false, message: 'Une erreur s\'est produite'});
