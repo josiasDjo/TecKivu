@@ -15,7 +15,15 @@ const jwt = require();
 
 // Importer les modèles
 const Users = require('./backend/models/Users');
-const 
+const Categories = require('./backend/models/Categories');
+const Favorites = require('./backend/models/Favorites');
+const Orders_items = require('./backend/models/Orders_items');
+const Orders = require('./backend/models/Orders');
+const Products_promo = require('./backend/models/Products_promo');
+const Products = require('./backend/models/Products');
+const Promotions = require('./backend/models/Promotions');
+const Reviews = require('./backend/models/Reviews');
+const Shopping_card = require('./backend/models/Shopping_card');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
