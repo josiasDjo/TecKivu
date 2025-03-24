@@ -46,6 +46,9 @@ exports.deleteProducts = async (req, res) => {
         const { product_id } = req.body;
         const productExist = await Products.findByPk(product_id);
         if (!productExist) return res.json({ success: false, message: 'Une erreur s\'est produite : Nous n\'avons pas pu trouver le produit'});
+
+        await Products.destroy({where:{ product_id:product_id}});
+        return res.json({ success: true, message: 'Produit supprimé'});
     } catch (err) {
         console.log('Une erreur s\'est produite : ', err);
         return res.json({ success: false, message: 'Une erreur s\'est produite'});
