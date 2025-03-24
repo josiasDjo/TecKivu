@@ -11,7 +11,7 @@ const flash = require('express-flash');
 const helmet = require('helmet');
 const xssClean = require('xss-clean');
 const rateLimit = require('express-rate-limit');
-const jwt = require();
+// const jwt = require();
 const port = 3000;
 
 // Importer les modèles
