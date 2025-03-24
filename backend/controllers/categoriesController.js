@@ -27,9 +27,17 @@ exports.getAllCategories = async (req, res) => {
 
 exports.modifyCategory = async (req, res) => {
     try {
-        const { category_name, description } = req.body;
+        const { category_id, category_name, description } = req.body;
+        const categoryExist = await Categories.findByPk(category_id);
+        if(!categoryExist) return { success: false, message: 'Catégorie introuvable, Veillez réessayer'}
+        await Categories.update(category_name, description);
+        return { success: true, message: 'Catégorie mis à jour avec succès'};
     } catch(err) {
         console.log('Une erreur s\'est produite : ', err);
         return res.json({ success: false, message: 'Une erreur s\'est produite'});
     }
+}
+
+exports.deleteCategory = async (req, res) => {
+    
 }
