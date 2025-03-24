@@ -11,9 +11,9 @@ const Product_promo = sequelize.define('table_product_promo', {
     timestamp: true
 });
 
-Product_promo.HasMany(product, { foreignKey: 'product_id'});
-Product_promo.BelongsTo(promo, { foreignKey: 'promo_id'});
-product.BelongsTo(Product_promo, { foreignKey: 'product_id'});
-promo.HasMany(Product_promo, { foreignKey: 'promo_id'});
+Product_promo.hasMany(product, { foreignKey: 'product_id'});
+Product_promo.belongsTo(promo, { foreignKey: 'promo_id'});
+product.belongsTo(Product_promo, { foreignKey: 'product_id'});
+promo.hasMany(Product_promo, { foreignKey: 'promo_id'});
 
 module.exports = Product_promo;

@@ -13,9 +13,9 @@ const Review = sequelize.define('table_reviews', {
     timestamp: true
 });
 
-User.HasMany(Review, { foreignKey: 'user_id'});
-Product.HasMany(Review, { foreignKey: 'product_id'});
-Review.BelongsTo(User, { foreignKey: 'user_id' });
-Review.BelongsTo(Product, { foreignKey: 'product_id'});
+User.hasMany(Review, { foreignKey: 'user_id'});
+Product.hasMany(Review, { foreignKey: 'product_id'});
+Review.belongsTo(User, { foreignKey: 'user_id' });
+Review.belongsTo(Product, { foreignKey: 'product_id'});
 
 module.exports = Review;

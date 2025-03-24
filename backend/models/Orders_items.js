@@ -14,8 +14,8 @@ const Order_items = sequelize.define('table_order_items', {
 });
 
 Order_items.belongsTo(Order, { foreignKey: 'order_id'});
-Order.HasMany(Order_items, { foreignKey: 'order_id'});
+Order.hasMany(Order_items, { foreignKey: 'order_id'});
 product.belongsTo(Order_items, { foreignKey: 'product_id'});
-Order_items.HasMany(product, { foreignKey: 'product_id'});
+Order_items.hasMany(product, { foreignKey: 'product_id'});
 
 module.exports = Order_items;
