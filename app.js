@@ -12,7 +12,7 @@ const helmet = require('helmet');
 const xssClean = require('xss-clean');
 const rateLimit = require('express-rate-limit');
 const cors = require('cors');
-// const bodyParser = require()
+const bodyParser = require('body-parser');
 // const jwt = require();
 const port = 3000;
 
