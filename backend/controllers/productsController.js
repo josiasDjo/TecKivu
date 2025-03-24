@@ -1,3 +1,5 @@
+const { where } = require("sequelize");
+
 const Products = requrie('../models/Products.js');
 
 exports.addProduct = async (req, res) => {
@@ -30,7 +32,9 @@ exports.modifyProducts = async (req, res) => {
         const { product_id,category_id,product_name,description,price,stock,image } = req.body;
         const ProductExist = await Products.findByPk(product_id);
         if (!ProductExist) return res.json({ success: false, message: 'Une erreur s\'est produite : Nous n\'avons pas pu trouver le produit'});
-        
+
+        await Products.update({ category_id,product_name,description,price,stock,image }, {where:{product_id:product_id}});
+        return res.json({ success: true, message: 'Mise à jour du produit réussie'});
     } catch(err) {
         console.log('Une erreur s\'est produite : ', err);
         return res.json({ success: false, message: 'Une erreur s\'est produite'});
@@ -39,7 +43,9 @@ exports.modifyProducts = async (req, res) => {
 
 exports.deleteProducts = async (req, res) => {
     try {
-
+        const { product_id } = req.body;
+        const productExist = await Products.findByPk(product_id);
+        if (!productExist) return res.json({ success: false, message: 'Une erreur s\'est produite : Nous n\'avons pas pu trouver le produit'});
     } catch (err) {
         console.log('Une erreur s\'est produite : ', err);
         return res.json({ success: false, message: 'Une erreur s\'est produite'});
