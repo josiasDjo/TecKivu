@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('./index');
 const category = require('./Categories');
 
-const Product = sequelize.define('', {
+const Product = sequelize.define('table_products', {
     product_id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     category_id: { type: DataTypes.INTEGER, allowNull: false },
     product_name: { type: DataTypes.STRING, allowNull: false },

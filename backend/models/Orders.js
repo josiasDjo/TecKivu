@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('./index');
 const User = require('./Users');
 
-const Order = sequelize.define('', {
+const Order = sequelize.define('table_orders', {
     order_id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     user_id: { type: DataTypes.INTEGER, allowNull: false },
     order_status: { type: DataTypes.STRING, allowNull: false },

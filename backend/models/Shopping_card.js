@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('./index');
 const User = require('./Users');
 
-const Shopping_card = sequelize.define('', {
+const Shopping_card = sequelize.define('table_shopping_card', {
     shoppingCard_id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     user_id: { type: DataTypes.INTEGER, allowNull: false },
     product_name: { type: DataTypes.STRING, allowNull: false },

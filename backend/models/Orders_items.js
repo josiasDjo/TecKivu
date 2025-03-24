@@ -3,7 +3,7 @@ const sequelize = require('./index');
 const Order = require('./Orders');
 const product = require('./Products');
 
-const Order_items = sequelize.define('', {
+const Order_items = sequelize.define('table_order_items', {
     order_item_id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     order_id: { type: DataTypes.INTEGER, allowNull: false },
     product_id: { type: DataTypes.INTEGER, allowNull: false },
