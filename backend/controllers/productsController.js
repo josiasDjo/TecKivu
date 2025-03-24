@@ -1,6 +1,6 @@
 const { where } = require("sequelize");
 
-const Products = requrie('../models/Products.js');
+const Products = require('../models/Products.js');
 
 exports.addProduct = async (req, res) => {
     try {
