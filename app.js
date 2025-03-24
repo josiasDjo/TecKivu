@@ -27,8 +27,11 @@ const Reviews = require('./backend/models/Reviews');
 const Shopping_card = require('./backend/models/Shopping_card');
 
 // Importer les routes
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const indexRouter = require('./backend/routes/index');
+const usersRouter = require('./backend/routes/users');
+const categoriesRouter = require('./backend/routes/categories');
+const shoppingCardRouter = require('./backend/routes/shoppingCard');
+const productsRouter = require('./backend/routes/products');
 
 const app = express();
 
@@ -81,6 +84,9 @@ app.use(limiter);
 // Déclaration des routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/products', productsRouter)
+app.use('/categories', categoriesRouter);
+app.use('/s/my/shopping-card', shoppingCardRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
