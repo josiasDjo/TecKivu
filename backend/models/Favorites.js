@@ -11,9 +11,9 @@ const Favorite = sequelize.define('table_favorites', {
     timestamp: true
 });
 
-User.HasMany(Favorite, { foreignKey: 'user_id'});
-Product.HasMany(Favorite, { foreignKey: 'product_id'});
-Favorite.BelongsTo(User, { foreignKey: 'user_id' });
-Favorite.BelongsTo(Product, { foreignKey: 'product_id'});
+User.hasMany(Favorite, { foreignKey: 'user_id'});
+Product.hasMany(Favorite, { foreignKey: 'product_id'});
+Favorite.belongsTo(User, { foreignKey: 'user_id' });
+Favorite.belongsTo(Product, { foreignKey: 'product_id'});
 
 module.exports = Favorite;

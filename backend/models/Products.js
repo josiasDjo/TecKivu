@@ -14,7 +14,7 @@ const Product = sequelize.define('table_products', {
     timestamp: true
 });
 
-Product.BelongsTo(category, { foreignKey: 'category_id'});
+Product.belongsTo(category, { foreignKey: 'category_id'});
 category.hasMany(Product, { foreignKey: 'category_id'});
 
 module.exports = Product;
