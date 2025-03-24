@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('./index');
 
-const Promotion = sequelize.define('', {
+const Promotion = sequelize.define('table_promotions', {
     promo_id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     promo_name: { type: DataTypes.INTEGER, allowNull: false },
     dicount_percentage: { type: DataTypes.DECIMAL, allowNull: false },
