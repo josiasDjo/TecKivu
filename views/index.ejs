@@ -2,38 +2,38 @@
 <html lang="fr">
 <%- include('head.ejs') %>
 <body>
-    <nav class="w-full h-20 flex flex-row justify-between items-center px-10 bg-black opacity-90 text-white fixed top-0 left-0">
-        <ul class="flex flex-row h-20 py-3">
-            <img src="/images/tech_kiv_FN.png" alt="logo de teckivu" class="w-auto h-full">
-        </ul>
-        <ul id="centralPart" class="flex flex-row relative">
-            <li class="mx-3 cursor-pointer relative"><a href="#">ACCUEIL</a></li>
-            <li class="mx-3 cursor-pointer relative"><a href="#">FUTURES</a></li>
-            <li class="mx-3 cursor-pointer relative"><a href="#">A PROPOS</a></li>
-            <li class="mx-3 cursor-pointer relative"><a href="#">NOUS CONTACTER</a></li>
-        </ul>
-        <ul class="flex flex-row">
-            <li class="mx-3 text-3xl items-center flex cursor-pointer relative">
-                <i class="fa-solid fa-circle-user"></i>
-            </li>
-            <div class="mx-3 text-3xl text-center justify-center items-center flex cursor-pointer relative w-12 h-12 rounded-full">
-                <li class="items-center flex"><i class="fa-solid fa-heart"></i></li>
-                <li class="w-4 h-4 orangeBgColor absolute top-1 right-1 rounded-full hidden"></li>
-            </div>
-            <div class="mx-3 flex flex-row items-center cursor-pointer relative">
-                <ul class="relative w-12 h-12 rounded-full items-center flex justify-center">
-                    <li class="text-3xl mr-2"><i class="fa-solid fa-cart-shopping"></i></li>
-                    <li class="w-4 h-4 orangeBgColor absolute top-1 right-1 rounded-full hidden"></li>
-                </ul>
-                <ul class="flex flex-col">
-                    <li><p>Mon panier</span></li>
-                    <li class="orangeColor"><p>$<span>0.00</span></p></li>
-                </ul>
-            </div>
-        </ul>
-    </nav>
     <header class="w-full flex flex-col relative">
-        <div id="heroHeader" class="w-full text-white relative px-24 py-48">
+        <nav class="w-full h-20 flex flex-row justify-between items-center px-10 bg-black opacity-90 text-white fixed top-0 left-0 z-50">
+            <ul class="flex flex-row h-20 py-3">
+                <img src="/images/tech_kiv_FN.png" alt="logo de teckivu" class="w-auto h-full">
+            </ul>
+            <ul id="centralPart" class="flex flex-row relative">
+                <li class="mx-3 cursor-pointer relative"><a href="#">ACCUEIL</a></li>
+                <li class="mx-3 cursor-pointer relative"><a href="#">FUTURES</a></li>
+                <li class="mx-3 cursor-pointer relative"><a href="#">A PROPOS</a></li>
+                <li class="mx-3 cursor-pointer relative"><a href="#">NOUS CONTACTER</a></li>
+            </ul>
+            <ul class="flex flex-row">
+                <li class="mx-3 text-3xl items-center flex cursor-pointer relative">
+                    <i class="fa-solid fa-circle-user"></i>
+                </li>
+                <div class="mx-3 text-3xl text-center justify-center items-center flex cursor-pointer relative w-12 h-12 rounded-full">
+                    <li class="items-center flex"><i class="fa-solid fa-heart"></i></li>
+                    <li class="w-4 h-4 orangeBgColor absolute top-1 right-1 rounded-full hidden"></li>
+                </div>
+                <div class="mx-3 flex flex-row items-center cursor-pointer relative">
+                    <ul class="relative w-12 h-12 rounded-full items-center flex justify-center">
+                        <li class="text-3xl mr-2"><i class="fa-solid fa-cart-shopping"></i></li>
+                        <li class="w-4 h-4 orangeBgColor absolute top-1 right-1 rounded-full hidden"></li>
+                    </ul>
+                    <ul class="flex flex-col">
+                        <li><p>Mon panier</span></li>
+                        <li class="orangeColor"><p>$<span>0.00</span></p></li>
+                    </ul>
+                </div>
+            </ul>
+        </nav>
+        <div id="heroHeader" class="w-full text-white relative px-24 py-48 mt-20">
             <img src="/images/tecKivu_logo_only_FN.png" alt="Logo de l'entreprise teckivu" class="h-14 w-auto absolute top-24 right-10">
             <h1 class="dm-sans text-4xl mb-6">Réinventez Votre Quotidien Numérique</h1>
             <p class="">
