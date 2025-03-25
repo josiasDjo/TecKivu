@@ -22,6 +22,15 @@ exports.getAllOrders = async (req, res) => {
     }
 }
 
+exports.getMyOrders = async (req, res) => {
+    try {
+        
+    } catch(err) {
+        console.log('Une erreur s\'est produite : ', err);
+        return res.json({ success: false, message: 'Une erreur s\'est produite'});
+    }
+}
+
 exports.updateOrder = async (req, res) => {
     try {
         const { order_id,user_id,order_status,total_amount,shipping_address,billing_adsress,payment_method} = req.body;
