@@ -51,6 +51,7 @@ app.set('views', [
   path.join(__dirname, 'views'),
   path.join(__dirname, 'views/admin'),
   path.join(__dirname, 'views/products'),
+  path.join(__dirname, 'includes'),
 ]);
 app.set('view engine', 'ejs');
 

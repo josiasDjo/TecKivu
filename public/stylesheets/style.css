@@ -1,8 +1,6 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
-a {
-  color: #00B7FF;
+#heroHeader {
+  background-image: url('/images/bg-header.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
