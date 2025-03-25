@@ -24,7 +24,10 @@ exports.getAllOrders = async (req, res) => {
 
 exports.getMyOrders = async (req, res) => {
     try {
-        
+        const { user_id } = req.body;
+        const myOrders = await Order.findAll({ where: { user_id: user_id}});
+        if (!myOrders) return { success: false, myOrders: 'Aucune commande effectuée pour le moment'};
+        return { success: true, myorders: myOrders};
     } catch(err) {
         console.log('Une erreur s\'est produite : ', err);
         return res.json({ success: false, message: 'Une erreur s\'est produite'});
