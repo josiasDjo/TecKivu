@@ -41,3 +41,8 @@ header nav #centralPart li:hover::after {
   transform: scaleX(1);
   transform-origin: right;
 }
+
+#divAfterHeader {
+  position: absolute;
+  top:34rem;
+}
