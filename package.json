@@ -16,6 +16,7 @@
     "express-flash": "^0.0.2",
     "express-rate-limit": "^7.5.0",
     "express-session": "^1.18.1",
+    "gsap": "^3.12.7",
     "helmet": "^8.1.0",
     "http-errors": "~1.6.3",
     "jade": "^0.29.0",
