@@ -25,5 +25,8 @@
     "mysql2": "^3.14.0",
     "sequelize": "^6.37.6",
     "xss-clean": "^0.1.4"
+  },
+  "devDependencies": {
+    "parcel": "^2.14.2"
   }
 }
