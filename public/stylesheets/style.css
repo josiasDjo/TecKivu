@@ -13,22 +13,22 @@
   background-size: cover;
   height: 34rem;
 }
-nav #centralPart ul li::after {
+header nav #centralPart ul li::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 2px;
-  background: #fd6420;
+  background: #ff6f00;
   left: 0;
   bottom: -10px;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
 }
-nav #centralPart ul li:hover::after {
+header nav #centralPart ul li:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
-nav #centralPart ul li:hover {
-  border-bottom: solid 2px #fd6420;
+header nav #centralPart ul li:hover {
+  border-bottom: solid 2px #ff6f00;
 }
