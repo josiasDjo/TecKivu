@@ -27,6 +27,7 @@ const Products = require('./backend/models/Products');
 const Promotions = require('./backend/models/Promotions');
 const Reviews = require('./backend/models/Reviews');
 const Shopping_card = require('./backend/models/Shopping_card');
+const product_cards = require('./backend/models/productsCard.js')
 
 // Importer les routes
 const indexRouter = require('./backend/routes/index');
@@ -34,6 +35,7 @@ const usersRouter = require('./backend/routes/users');
 const categoriesRouter = require('./backend/routes/categories');
 const shoppingCardRouter = require('./backend/routes/shoppingCard');
 const productsRouter = require('./backend/routes/products');
+const productsCardsRouter = require('./backend/routes/productsCard.js');
 
 const app = express();
 
@@ -89,6 +91,7 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter)
 app.use('/categories', categoriesRouter);
 app.use('/s/my/shopping-card', shoppingCardRouter);
+app.use('/s/explore', productsCardsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
