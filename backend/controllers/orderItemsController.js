@@ -15,7 +15,9 @@ exports.addOrdersItems = async (req, res) => {
 
 exports.getOrdersItems = async (req,res) => {
     try {
-        
+        const user_id = req.session.users.user_id;
+        const myOrdersItems = await Orders_items.findAll({ where: { user_id }});
+        return { success: true, order_items: myOrdersItems};
     } catch(err) {
         console.log('Une erreur s\'est produite : ', err);
         return res.json({ success: false, message: 'Une erreur s\'est produite'});
